@@ -1,0 +1,19 @@
+# Install torch first (CPU build is fine):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# Face expression
+opencv-python>=4.8,<5  # 5.x dropped the Haar face detector
+hsemotion-onnx>=0.3
+onnxruntime>=1.16
+
+# Speech + text emotion (shared with Sentiment-Analysis-Detection-v1)
+transformers>=4.35
+openai-whisper
+sounddevice>=0.4
+
+# Feedback
+requests>=2.31
+pyttsx3>=2.90
+
+# Optional — only for --robot reachy (real Reachy Mini Lite/Wireless or MuJoCo sim):
+#   pip install "reachy-mini[mujoco]"
